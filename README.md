@@ -172,12 +172,12 @@ By observing the result from OLS summary, we can mark some important keys of thi
 
 •	Coefficient of cylinernumber_twelve is -1400.1000 means that  having ‘cylindernumber’ as five reduces the price by 1,4000 units compared to the baseline.
 
-	Therefore, we can say that cars with fewer cylinders (two, three, four) tend to have significantly lower prices compared to the baseline. The magnitude of the coefficients for these categories suggests a strong negative impact on price, particularly for cars with four or fewer cylinders. The number of cylinders in a car is a significant factor in determining its price. This information can be useful for car manufacturers and sellers in pricing strategies and for buyers in understanding the value impact of different engine configurations.
+Therefore, we can say that cars with fewer cylinders (two, three, four) tend to have significantly lower prices compared to the baseline. The magnitude of the coefficients for these categories suggests a strong negative impact on price, particularly for cars with four or fewer cylinders. The number of cylinders in a car is a significant factor in determining its price. This information can be useful for car manufacturers and sellers in pricing strategies and for buyers in understanding the value impact of different engine configurations.
 
 
 ![ols_4.png](lib/ols_4.png)
 
-  Based on the findings presented, it appears that having four cylinders has the most significant impact on the final price, possibly due to the prevalence of this value in the cylinder number attribute. However, although the R-square value for four cylinders is not exceptionally high, it's not advisable to isolate this dummy variable as the sole factor influencing the final outcome.
+Based on the findings presented, it appears that having four cylinders has the most significant impact on the final price, possibly due to the prevalence of this value in the cylinder number attribute. However, although the R-square value for four cylinders is not exceptionally high, it's not advisable to isolate this dummy variable as the sole factor influencing the final outcome.
 
 
 ## Quantitative Data Processing
@@ -205,7 +205,7 @@ Least – squared regression function:
 
 ![residuals.png](lib/residuals.png)
 
-  The residual plots above do not show any pattern, so a linear model is appropriate. Furthermore, the absolute value of the residuals seems to be larger when x is larger and smaller when x is smaller. This means that the predictions made using the regression equation will be less reliable when x is large because there is more variability in y (no constant variance).
+The residual plots above do not show any pattern, so a linear model is appropriate. Furthermore, the absolute value of the residuals seems to be larger when x is larger and smaller when x is smaller. This means that the predictions made using the regression equation will be less reliable when x is large because there is more variability in y (no constant variance).
 
 ![boxplot_residuals.png](lib/boxplot_residuals.png)
 
