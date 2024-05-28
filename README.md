@@ -95,10 +95,10 @@ In general, the ‘Car Price Assignment’ dataset contains some technique recor
 + There is no duplicated row existing in the dataset. 
 
 
-![desribe.png](lib\describe.png)
+![desribe.png](lib/describe.png)
 
 
-![correlation.png](lib\correlation.png)
+![correlation.png](lib/correlation.png)
 
 Here, we easily see that there are six attributes that has the typical correlation to the `PRICE` attributes: 'curbweight', 'enginesize', 'horsepower', 'carwidth', 'highwaympg', 'cylindernumber_four'
 -	 ‘enginesize’ attributes as the most significant positive correlation with 0.87.
@@ -109,11 +109,11 @@ Here, we easily see that there are six attributes that has the typical correlati
 
 
 
-![boxplotall.png](lib\boxplotall.png)
+![boxplotall.png](lib/boxplotall.png)
 
 Almost outliers exist in numerical attributes, except for ‘carheight’, ‘boreratio’, and ‘curbweight’ attribute. It could come from some unknown measurements.
 
-![pairplot.png](lib\pairplot.png)
+![pairplot.png](lib/pairplot.png)
 
 •	**Enginesize vs. Price**: There's a positive correlation, suggesting that larger engine sizes tend to be associated with higher prices.
 
@@ -142,15 +142,15 @@ Overall, these insights indicate that engine characteristics and fuel efficiency
 
 ## Categorical Data Processing
 
-![frequencytable.png](lib\frequencytable.png)
+![frequencytable.png](lib/frequencytable.png)
 
 Obviously, the value ‘Four’ has the frequency of 159, the highest frequency in ‘cylindernumber’. Therefore, it take the highest relative frequency of 77.68%. We plot bar graphs for easily compare the frequency of each value:
 
-![bargraph.png](lib\frequencybargraph.png)
+![bargraph.png](lib/frequencybargraph.png)
 
-![frequencypiechart.png](lib\frequencypiechart.png)
+![frequencypiechart.png](lib/frequencypiechart.png)
 
-![ols_full.png](lib\ols_full.png)
+![ols_full.png](lib/ols_full.png)
 
 By observing the result from OLS summary, we can mark some important keys of this model:
 
@@ -175,7 +175,7 @@ By observing the result from OLS summary, we can mark some important keys of thi
 	Therefore, we can say that cars with fewer cylinders (two, three, four) tend to have significantly lower prices compared to the baseline. The magnitude of the coefficients for these categories suggests a strong negative impact on price, particularly for cars with four or fewer cylinders. The number of cylinders in a car is a significant factor in determining its price. This information can be useful for car manufacturers and sellers in pricing strategies and for buyers in understanding the value impact of different engine configurations.
 
 
-![ols_4.png](lib\ols_4.png)
+![ols_4.png](lib/ols_4.png)
 
   Based on the findings presented, it appears that having four cylinders has the most significant impact on the final price, possibly due to the prevalence of this value in the cylinder number attribute. However, although the R-square value for four cylinders is not exceptionally high, it's not advisable to isolate this dummy variable as the sole factor influencing the final outcome.
 
@@ -184,32 +184,32 @@ By observing the result from OLS summary, we can mark some important keys of thi
 
 Initially, ‘enginesize’ has the strongest correlation with ‘price’, showing a correlation coefficient of 0.87. Therefore, we select ‘enginesize’ as the predictor variable to construct a least-squares regression model. Before proceeding with model construction, we will create some plots to examine the distribution and assess any potential outliers.
 
-![histogram.png](lib\histogram.png)
+![histogram.png](lib/histogram.png)
 
 There are numerous outliers in both attributes. By applying the quartile formula to identify outlier values, we have found the following outliers:
 
-![boxplotquanti.png](lib\boxplotquanti.png)
+![boxplotquanti.png](lib/boxplotquanti.png)
 
-![scatter.png](lib\scatter.png)
+![scatter.png](lib/scatter.png)
 
 The scatter plot reveals a linear relationship between ‘enginesize’ and ‘price’, indicating a positive correlation between these two variables. To delve deeper, we will construct a least squares regression equation and interpret the results.
 
-![LQR.png](lib\LQR.png)
+![LQR.png](lib/LQR.png)
 
 Least – squared regression function:
 
     Price = -8005.45 +  167.70 * enginesize
 
 
-![LQRL.png](lib\LSRL.png)
+![LQRL.png](lib/LSRL.png)
 
-![residuals.png](lib\residuals.png)
+![residuals.png](lib/residuals.png)
 
   The residual plots above do not show any pattern, so a linear model is appropriate. Furthermore, the absolute value of the residuals seems to be larger when x is larger and smaller when x is smaller. This means that the predictions made using the regression equation will be less reliable when x is large because there is more variability in y (no constant variance).
 
-![boxplot_residuals.png](lib\boxplot_residuals.png)
+![boxplot_residuals.png](lib/boxplot_residuals.png)
 
-![qq_plot.png](lib\qqplot.png)
+![qq_plot.png](lib/qqplot.png)
 
 	From the Q-Q plot, we can conclude that the residuals are normally distributed.
 
